@@ -1,4 +1,8 @@
-import { WORKFLOW_ID } from "@/lib/config";
+const resolvedWorkflowId =
+  parsedBody?.workflow?.id ??
+  parsedBody?.workflowId ??
+  process.env.NEXT_PUBLIC_CHATKIT_WORKFLOW_ID;
+
 
 export const runtime = "edge";
 
